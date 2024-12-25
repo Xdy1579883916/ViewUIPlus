@@ -18,6 +18,21 @@ import style from './directives/style';
 // libraries
 import dayjs from 'dayjs';
 
+// mixins
+import mixinsEmitter from './mixins/emitter';
+import mixinsForm from './mixins/form';
+import mixinsLocale from './mixins/locale';
+import mixinsLink from './mixins/link';
+import mixinsGlobalConfig from './mixins/globalConfig';
+
+// utils
+import csv from './utils/csv';
+import * as assist from './utils/assist';
+import * as dom from './utils/dom';
+import * as transferQueue from './utils/transfer-queue';
+
+import setupModalPlus from './components/modal-plus';
+
 
 const directives = {
     display: style.display,
@@ -169,7 +184,17 @@ const API = {
     lang,
     // Circle,
     // Switch,
-    ...components
+    ...components,
+    mixinsEmitter,
+    mixinsLink,
+    mixinsLocale,
+    mixinsForm,
+    mixinsGlobalConfig,
+    assist,
+    dom,
+    transferQueue,
+    csv,
+    setupModalPlus,
 };
 
 export default API;

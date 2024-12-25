@@ -1,8 +1,8 @@
 /**
  * Created by aresn on 16/6/20.
  */
-import { createApp } from 'vue';
-import { createRouter, createWebHistory } from 'vue-router';
+import {createApp} from 'vue';
+import {createRouter, createWebHistory} from 'vue-router';
 import App from './app.vue';
 import ViewUIPlus from '../src/index';
 // import locale from '../src/locale/lang/en-US';
@@ -369,4 +369,5 @@ const app = createApp(App);
 app.use(ViewUIPlus);
 app.use(router);
 app.mount('#app');
+app.config.globalProperties.$ModalPlus = ViewUIPlus.setupModalPlus(app)
 export default app;

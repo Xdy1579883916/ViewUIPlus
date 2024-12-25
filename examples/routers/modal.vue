@@ -12,10 +12,13 @@
     </p>
     <p>
         <Button @click="handleRender">Custom content</Button>
+        <Button @click="handleRender2">自定义render</Button>
     </p>
 </template>
 <script>
-import ViewUI from '../../src/index';
+import {Input} from '../../src/index';
+import RemarkModal from "../components/RemarkModal.vue";
+
 export default {
     data () {
         return {
@@ -92,7 +95,7 @@ export default {
         handleRender () {
             this.$Modal.confirm({
                 render: (h) => {
-                    return h(ViewUI.Input, { // todo 不能直接写 'Input' ?
+                    return h(Input, {
                         modelValue: this.value,
                         autofocus: true,
                         placeholder: 'Please enter your name...',
@@ -100,6 +103,25 @@ export default {
                     })
                 }
             })
+        },
+        handleRender2 () {
+            this.$ModalPlus.confirm({
+                headTitle: '备注',
+                width: 1000,
+                render: RemarkModal,
+                props: {
+                    props: {
+                        open: this.handleRender2
+                    }
+                },
+                footerShow: false,
+                onOk: (data) => {
+                    this.$Message.info(`点击了确定, ${JSON.stringify(data)}`);
+                },
+                onCancel: (data) => {
+                    this.$Message.info(`点击了取消, ${JSON.stringify(data)}`);
+                }
+            });
         }
     }
 }
