@@ -3,7 +3,7 @@ import Modal from './modal.vue';
 import Button from '../button/button.vue';
 import Locale from '../../mixins/locale';
 import {isClient} from '../../utils/index';
-import ModalHeader from "@/components/modal-plus/modal-header.vue";
+import ModalHeader from "./modal-header.vue";
 
 const prefixCls = 'ivu-modal-confirm';
 

@@ -46,7 +46,7 @@
     import Checkbox from '../checkbox/checkbox.vue';
     import Tooltip from '../tooltip/tooltip.vue';
     import { isClient } from '../../utils/index';
-    import {getRow} from "@/utils/getRow";
+    import {getRow} from '../../utils/getRow';
 
     export default {
         name: 'TableCell',
