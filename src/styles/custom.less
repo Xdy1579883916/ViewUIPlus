@@ -1,5 +1,64 @@
 @import "color/colors";
 
+:root {
+    @primary-color-light: tint(@primary-color, 20%);
+    --primary-color: @primary-color;
+    --primary-light: @primary-color-light;
+    --primary-light-1: tint(@primary-color-light, 10%);
+    --primary-light-2: tint(@primary-color-light, 20%);
+    --primary-light-3: tint(@primary-color-light, 30%);
+    --primary-light-4: tint(@primary-color-light, 40%);
+    --primary-light-5: tint(@primary-color-light, 50%);
+    --primary-light-6: tint(@primary-color-light, 60%);
+    --primary-light-7: tint(@primary-color-light, 70%);
+    --primary-light-8: tint(@primary-color-light, 80%);
+    --primary-light-9: tint(@primary-color-light, 90%);
+
+    --ivu-menu-light: @white;
+
+    --normal-font-color: @title-color;
+    --normal-font-color-2: tint(@title-color, 20%);
+    --normal-font-color-3: tint(@title-color, 30%);
+    --normal-font-color-4: tint(@title-color, 40%);
+
+    --normal-icon-color: @text-color;
+
+    --background-color: @table-thead-bg;
+    --light-background-color: tint(@table-thead-bg, 10%);
+    --light-background-color-2: tint(@table-thead-bg, 20%);
+    --light-background-color-3: tint(@table-thead-bg, 30%);
+    --light-background-color-4: tint(@table-thead-bg, 40%);
+
+    --light-blue-background-color: #f0f6ff;
+
+    --title-color: @title-color;
+    --content-color: @text-color;
+    --subtitle-color: @subsidiary-color;
+    --disable-color: @btn-disable-color;
+    --border-color: @border-color-base;
+    --border-color-dack: #ddd;
+
+    --success-color: @success-color;
+    --success-color-1: tint(@success-color, 10%);
+    --success-color-2: tint(@success-color, 20%);
+    --success-color-3: tint(@success-color, 30%);
+
+    --warn-color: @warning-color;
+    --warn-color-1: tint(@warning-color, 10%);
+    --warn-color-2: tint(@warning-color, 20%);
+    --warn-color-3: tint(@warning-color, 30%);
+
+    --error-color: @error-color;
+    --error-color-1: tint(@error-color, 10%);
+    --error-color-2: tint(@error-color, 20%);
+    --error-color-3: tint(@error-color, 30%);
+
+    --info-color: @info-color;
+    --info-color-1: tint(@info-color, 10%);
+    --info-color-2: tint(@info-color, 20%);
+    --info-color-3: tint(@info-color, 30%);
+}
+
 // Prefix
 @css-prefix             : ivu-;
 @css-prefix-iconfont    : ivu-icon;
