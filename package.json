@@ -19,7 +19,6 @@
     "typings": "types/index.d.ts",
     "files": [
         "dist",
-        "src",
         "types"
     ],
     "scripts": {
