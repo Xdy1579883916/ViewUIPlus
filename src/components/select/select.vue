@@ -654,9 +654,10 @@
                         this.visible = true;
                     }
                 }
+                // 修复开启 filterable 时，过滤行为异常
+                this.filterQueryChange = query !== this.query
                 this.query = query;
                 this.unchangedQuery = this.visible;
-                this.filterQueryChange = true;
             },
             toggleHeaderFocus({type}){
                 if (this.itemDisabled) {
