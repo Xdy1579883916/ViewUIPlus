@@ -33,6 +33,7 @@ export const formatDate = function(date, format) {
 };
 
 export const parseDate = function(string, format) {
+    if (!string) return null;
     return dayjs(string).format(format || 'YYYY-MM-DD');
 };
 
