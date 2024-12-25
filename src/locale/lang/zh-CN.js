@@ -23,7 +23,7 @@ const lang = {
             endTime: '结束时间',
             clear: '清空',
             ok: '确定',
-            datePanelLabel: '[yyyy年] [m月]',
+            datePanelLabel: '[YYYY年] [m月]',
             month: '月',
             month1: '1 月',
             month2: '2 月',

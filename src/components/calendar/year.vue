@@ -21,7 +21,7 @@
 </template>
 <script>
     import dayjs from 'dayjs';
-    import chunk from 'lodash.chunk';
+    import {chunk} from 'lodash-es';
     import events from './events';
 
     export default {

@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Slutt klokken',
             clear: 'Nullstill',
             ok: 'OK',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: 'Måned',
             month1: 'Januar',
             month2: 'Februar',

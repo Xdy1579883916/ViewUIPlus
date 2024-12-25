@@ -1,4 +1,4 @@
-import dateUtil from '../../utils/date';
+import dayjs from 'dayjs';
 
 export const toDate = function(date) {
     let _date = new Date(date);
@@ -29,11 +29,11 @@ export const isInRange = (time, a, b) => {
 export const formatDate = function(date, format) {
     date = toDate(date);
     if (!date) return '';
-    return dateUtil.format(date, format || 'yyyy-MM-dd');
+    return dayjs(date).format(format || 'YYYY-MM-DD');
 };
 
 export const parseDate = function(string, format) {
-    return dateUtil.parse(string, format || 'yyyy-MM-dd');
+    return dayjs(string).format(format || 'YYYY-MM-DD');
 };
 
 export const getDayCountOfMonth = function(year, month) {
@@ -77,7 +77,7 @@ export const initTimeDate = function() {
 export const formatDateLabels = (function() {
     /*
       Formats:
-      yyyy - 4 digit year
+      YYYY - 4 digit year
       m - month, numeric, 1 - 12
       mm - month, numeric, 01 - 12
       mmm - month, 3 letters, as in `toLocaleDateString`
@@ -87,7 +87,7 @@ export const formatDateLabels = (function() {
     */
 
     const formats = {
-        yyyy: date => date.getFullYear(),
+        YYYY: date => date.getFullYear(),
         m: date => date.getMonth() + 1,
         mm: date => ('0' + (date.getMonth() + 1)).slice(-2),
         mmm: (date, locale) => {
@@ -113,7 +113,7 @@ export const formatDateLabels = (function() {
             return monthName[0].toUpperCase() + monthName.slice(1).toLowerCase();
         }
     };
-    const formatRegex = new RegExp(['yyyy', 'Mmmm', 'mmmm', 'Mmm', 'mmm', 'mm', 'm'].join('|'), 'g');
+    const formatRegex = new RegExp(['YYYY', 'Mmmm', 'mmmm', 'Mmm', 'mmm', 'mm', 'm'].join('|'), 'g');
 
     return function(locale, format, date) {
         const componetsRegex = /(\[[^\]]+\])([^\[\]]+)(\[[^\]]+\])/;
@@ -125,7 +125,7 @@ export const formatDateLabels = (function() {
             });
             return {
                 label: label,
-                type: component.indexOf('yy') != -1 ? 'year' : 'month'
+                type: component.indexOf('YY') != -1 ? 'year' : 'month'
             };
         });
         return {
@@ -137,14 +137,14 @@ export const formatDateLabels = (function() {
 
 // Parsers and Formaters
 export const DEFAULT_FORMATS = {
-    date: 'yyyy-MM-dd',
-    month: 'yyyy-MM',
-    year: 'yyyy',
-    datetime: 'yyyy-MM-dd HH:mm:ss',
+    date: 'YYYY-MM-DD',
+    month: 'YYYY-MM',
+    year: 'YYYY',
+    datetime: 'YYYY-MM-DD HH:mm:ss',
     time: 'HH:mm:ss',
     timerange: 'HH:mm:ss',
-    daterange: 'yyyy-MM-dd',
-    datetimerange: 'yyyy-MM-dd HH:mm:ss'
+    daterange: 'YYYY-MM-DD',
+    datetimerange: 'YYYY-MM-DD HH:mm:ss'
 };
 
 // export const RANGE_SEPARATOR = ' - ';  // use picker.vue prop separator

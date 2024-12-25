@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Bitişe',
             clear: 'Temizle',
             ok: 'Tamam',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: '',
             month1: 'Ocak',
             month2: 'Şubat',

@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Ende',
             clear: 'Leeren',
             ok: 'OK',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: 'Monat',
             month1: 'Januar',
             month2: 'Februar',

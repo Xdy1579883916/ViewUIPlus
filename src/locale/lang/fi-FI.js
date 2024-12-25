@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Päättymisaika',
             clear: 'Tyhjennä',
             ok: 'OK',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: 'Kuukausi',
             month1: 'Tammikuu',
             month2: 'Helmikuu',

@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Кінцевий час',
             clear: 'Очистити',
             ok: 'OK',
-            datePanelLabel: '[Mmmm] [yyyy]',
+            datePanelLabel: '[Mmmm] [YYYY]',
             month: '',
             month1: 'Січень',
             month2: 'Лютий',

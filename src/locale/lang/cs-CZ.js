@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Konec',
             clear: 'Vymazat',
             ok: 'OK',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: 'Měsíc',
             month1: 'Leden',
             month2: 'Únor',
@@ -86,7 +86,7 @@ const lang = {
             item: 'položka',
             /* TODO: add third plural form for Czech,
              * If there is 2-4 items the translation should be "položky"
-             */ 
+             */
             items: 'položek', // Plural form for 5 or more items
             prev5: 'Předchozích 5 stránek',
             next5: 'Následujících 5 stránek',

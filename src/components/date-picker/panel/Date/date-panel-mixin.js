@@ -10,7 +10,7 @@ export default {
         },
         format: {
             type: String,
-            default: 'yyyy-MM-dd'
+            default: 'YYYY-MM-DD'
         },
         selectionMode: {
             type: String,

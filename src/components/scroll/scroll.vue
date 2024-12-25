@@ -21,7 +21,7 @@
     </div>
 </template>
 <script>
-    import throttle from 'lodash.throttle';
+    import {throttle} from 'lodash-es';
     import loader from './loading-component.vue';
     import { on, off } from '../../utils/dom';
     import Locale from '../../mixins/locale';

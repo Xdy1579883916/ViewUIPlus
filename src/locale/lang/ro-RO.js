@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Ora finală',
             clear: 'Anulează',
             ok: 'OK',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: 'Lună',
             month1: 'Ianuarie',
             month2: 'Februarie',

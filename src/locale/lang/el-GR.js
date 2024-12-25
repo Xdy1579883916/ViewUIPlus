@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Ωρα Λήξης',
             clear: 'Καθαρισμός',
             ok: 'Εντάξει',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: 'Μήνας',
             month1: 'Ιανουάριος',
             month2: 'Φεβρουάριος',

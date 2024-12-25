@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Ngày kết thúc',
             clear: 'Xóa',
             ok: 'Đồng ý',
-            datePanelLabel: '[Tháng mm]/[yyyy]',
+            datePanelLabel: '[Tháng mm]/[YYYY]',
             month: '',
             month1: 'Tháng 1',
             month2: 'Tháng 2',

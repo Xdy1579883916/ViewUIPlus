@@ -161,13 +161,13 @@
 <!--<br>-->
 <!--<Date-picker type="datetime" v-model="singleDate" placeholder="选择日期和时间" style="width: 200px"></Date-picker> | Single datetime, date object-->
 <!--<br>-->
-<!--<Date-picker type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 200px"></Date-picker> | Single datetime, format yyyy-MM-dd HH:mm-->
+<!--<Date-picker type="datetime" format="YYYY-MM-DD HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 200px"></Date-picker> | Single datetime, format YYYY-MM-DD HH:mm-->
 <!--<br>-->
 <!--<Date-picker type="date" multiple style="width: 200px"></Date-picker> | Single date, multiple-->
 <!--<br>-->
 <!--<Date-picker type="date" multiple style="width: 200px" show-week-numbers></Date-picker> | Single date, multiple, show week numbers-->
 <!--<br>-->
-<!--<Date-picker type="date" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 200px"></Date-picker> | Single date, format MM-dd HH:mm-->
+<!--<Date-picker type="date" format="YYYY-MM-DD HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 200px"></Date-picker> | Single date, format MM-dd HH:mm-->
 <!--<br>-->
 <!--<Date-picker type="datetime" :start-date="minDate" v-model="singleDate" placeholder="选择日期和时间" style="width: 200px"></Date-picker> | Single datetime, date object, start date-->
 <!--<br>-->
@@ -180,7 +180,7 @@
 <!--<br>-->
 <!--<Date-picker type="daterange" split-panels placeholder="选择日期和时间" style="width: 300px"></Date-picker> | Range, no dates, split panels-->
 <!--<br>-->
-<!--<Date-picker type="datetimerange" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 300px"></Date-picker> | DateTimeRange, format yyyy-MM-dd HH:mm-->
+<!--<Date-picker type="datetimerange" format="YYYY-MM-DD HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 300px"></Date-picker> | DateTimeRange, format YYYY-MM-DD HH:mm-->
 <!--</div>-->
 <!--<div style="width: 50%; float: right;">-->
 <!--<TimePicker type="timerange" placeholder="Select time" style="width: 168px"></TimePicker>-->

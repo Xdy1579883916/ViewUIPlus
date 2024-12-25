@@ -53,7 +53,7 @@
 <script>
     import { getCurrentInstance } from 'vue';
     import { on, off } from '../../utils/dom';
-    import throttle from 'lodash.throttle';
+    import {throttle} from 'lodash-es';
     import { isClient } from '../../utils';
     import Locale from '../../mixins/locale';
     import Icon from '../icon/icon.vue';

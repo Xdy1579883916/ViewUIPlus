@@ -23,7 +23,7 @@ const lang = {
             endTime: 'ᠲᠡᠭᠦᠰᠬᠦ ᠴᠠᠭ',
             clear: 'ᠬᠣᠭᠤᠰᠤᠯᠠᠬᠤ',
             ok: 'ᠲᠡᠭᠡᠶ᠎ᠡ',
-            datePanelLabel: '[yyyy ᠣᠨ] [m ᠰᠠᠷ᠎ᠠ]',
+            datePanelLabel: '[YYYY ᠣᠨ] [m ᠰᠠᠷ᠎ᠠ]',
             month: 'ᠰᠠᠷ᠎ᠠ',
             month1: '1 ᠰᠠᠷ᠎ᠠ',
             month2: '2 ᠰᠠᠷ᠎ᠠ',

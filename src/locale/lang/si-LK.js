@@ -23,7 +23,7 @@ const lang = {
             endTime: 'අවසන් වේලාව',
             clear: 'හිස් කරන්න',
             ok: 'හරි',
-            datePanelLabel: '[yyyy] [mmmm]',
+            datePanelLabel: '[YYYY] [mmmm]',
             month: 'මාසය',
             month1: 'දුරුතු',
             month2: 'නවම්',

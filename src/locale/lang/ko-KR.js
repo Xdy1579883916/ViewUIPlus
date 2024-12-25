@@ -23,7 +23,7 @@ const lang = {
             endTime: '종료 시간',
             clear: '삭제',
             ok: '예',
-            datePanelLabel: '[yyyy년] [m월]',
+            datePanelLabel: '[YYYY년] [m월]',
             month: '월',
             month1: '1월',
             month2: '2월',

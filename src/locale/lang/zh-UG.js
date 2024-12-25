@@ -23,7 +23,7 @@ const lang = {
             endTime: 'ئاخىرلىشىش',
             clear: 'بىكارلاش',
             ok: 'جەزىملەش',
-            datePanelLabel: '[yyyyيىل] [mئاي]',
+            datePanelLabel: '[YYYYيىل] [mئاي]',
             month: 'ئاي',
             month1: '1-ئاي',
             month2: '2-ئاي',

@@ -60,7 +60,7 @@ exports.createTest = function(Compo, propsData = {}, mounted = false) {
 };
 
 /**
- * Transform Date string (yyyy-mm-dd hh:mm:ss) to Date object
+ * Transform Date string (YYYY-MM-DD HH-mm-ss) to Date object
  * @param {String}
  */
 exports.stringToDate = function(str) {

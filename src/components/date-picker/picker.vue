@@ -733,7 +733,11 @@
                             if (start instanceof Date && end instanceof Date){
                                 val = val.map(date => new Date(date));
                             } else if (typeof start === 'string' && typeof end === 'string'){
-                                val = parser(val.join(this.separator), format, this.separator);
+                                if (!start || !end){
+                                    val = [null, null];
+                                } else {
+                                    val = parser(val.join(this.separator), format, this.separator);
+                                }
                             } else if (!start || !end){
                                 val = [null, null];
                             }

@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Sluttid',
             clear: 'Ryd',
             ok: 'OK',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: 'Måned',
             month1: 'Januar',
             month2: 'Februar',

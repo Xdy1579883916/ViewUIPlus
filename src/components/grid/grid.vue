@@ -3,7 +3,7 @@
 </template>
 <script>
     import elementResizeDetectorMaker from 'element-resize-detector';
-    import throttle from 'lodash.throttle';
+    import {throttle} from 'lodash-es';
 
     export default {
         name: 'Grid',

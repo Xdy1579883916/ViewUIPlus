@@ -23,7 +23,7 @@ const lang = {
             endTime: 'وقت النهاية',
             clear: 'إزالة',
             ok: 'حسنا',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: 'شهر',
             month1: 'يناير',
             month2: 'فبراير',

@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Orario fine',
             clear: 'Annulla',
             ok: 'OK',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: 'Mese',
             month1: 'Gennaio',
             month2: 'Febbraio',

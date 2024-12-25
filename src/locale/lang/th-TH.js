@@ -23,7 +23,7 @@ const lang = {
             endTime: 'สิ้นสุดเวลา',
             clear: 'ล้างข้อมูล',
             ok: 'ตกลง',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: 'เดือน',
             month1: 'มกราตม',
             month2: 'กุมภาพันธ์',

@@ -23,7 +23,7 @@ const lang = {
             endTime: 'Дуусах Цаг',
             clear: 'Цэвэрлэх',
             ok: 'OK',
-            datePanelLabel: '[mmmm] [yyyy]',
+            datePanelLabel: '[mmmm] [YYYY]',
             month: 'Сар',
             month1: '1-р сар',
             month2: '2-р сар',
