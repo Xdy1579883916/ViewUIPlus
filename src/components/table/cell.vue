@@ -11,14 +11,14 @@
             <Icon type="ios-remove" v-else />
         </div>
         <div class="ivu-table-cell-tree ivu-table-cell-tree-empty" v-else-if="showTreeNode"></div>
-        <template v-if="renderType === 'html'"><span v-html="row[column.key]"></span></template>
+        <template v-if="renderType === 'html'"><span v-html="rowData"></span></template>
         <template v-if="renderType === 'normal'">
             <template v-if="column.tooltip">
-                <Tooltip transfer :content="row[column.key]" :theme="column.tooltipTheme ? column.tooltipTheme : TableInstance.tooltipTheme" :disabled="!showTooltip" :max-width="column.tooltipMaxWidth ? column.tooltipMaxWidth : TableInstance.tooltipMaxWidth" class="ivu-table-cell-tooltip">
-                    <span ref="content" @mouseenter="handleTooltipIn" class="ivu-table-cell-tooltip-content">{{ row[column.key] }}</span>
+                <Tooltip transfer :content="rowData" :theme="column.tooltipTheme ? column.tooltipTheme : TableInstance.tooltipTheme" :disabled="!showTooltip" :max-width="column.tooltipMaxWidth ? column.tooltipMaxWidth : TableInstance.tooltipMaxWidth" class="ivu-table-cell-tooltip">
+                    <span ref="content" @mouseenter="handleTooltipIn" class="ivu-table-cell-tooltip-content">{{ rowData }}</span>
                 </Tooltip>
             </template>
-            <span v-else>{{row[column.key]}}</span>
+            <span v-else>{{rowData}}</span>
         </template>
         <template v-if="renderType === 'expand' && !row._disableExpand">
             <div :class="expandCls" @click="toggleExpand">
@@ -46,6 +46,7 @@
     import Checkbox from '../checkbox/checkbox.vue';
     import Tooltip from '../tooltip/tooltip.vue';
     import { isClient } from '../../utils/index';
+    import {getRow} from "@/utils/getRow";
 
     export default {
         name: 'TableCell',
@@ -135,6 +136,10 @@
             childrenLoading () {
                 const data = this.TableInstance.getDataByRowKey(this.row._rowKey);
                 return '_loading' in data && data._loading;
+            },
+            // 为获取cell数据, key提供path支持、defaultValue默认值支持
+            rowData() {
+                return getRow(this.row, this.column.key, this.column.defaultValue);
             }
         },
         methods: {
