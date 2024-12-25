@@ -1,6 +1,7 @@
 
 import type { App } from 'vue';
 export * from './viewuiplus.components';
+export * from './viewuiplus.utils';
 
 interface ViewUIPlusGlobalOptions {
     size?: string;
