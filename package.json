@@ -1,6 +1,6 @@
 {
     "name": "view-ui-plus",
-    "version": "1.3.19-alpha.3",
+    "version": "1.3.19-alpha.6",
     "title": "ViewUIPlus",
     "description": "A high quality UI components Library with Vue.js 3",
     "homepage": "http://www.iviewui.com",
@@ -19,6 +19,7 @@
     "typings": "types/index.d.ts",
     "files": [
         "dist",
+        "src",
         "types"
     ],
     "scripts": {

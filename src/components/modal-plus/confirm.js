@@ -12,7 +12,6 @@ Modal.newInstance = (sharedApp, properties, resolve, reject) => {
     const {
         render,
         props: _props,
-        on: _on,
         onOk,
         onCancel,
         ...data
@@ -57,7 +56,7 @@ Modal.newInstance = (sharedApp, properties, resolve, reject) => {
             return Object.assign({}, initData, data);
         },
         render() {
-            let {props = {}} = _props;
+            let {props = {}, on = {}, attrs = {}, domProps = {}, ...other } = _props || {};
 
             // render content
             let body_render;
@@ -67,6 +66,10 @@ Modal.newInstance = (sharedApp, properties, resolve, reject) => {
                 }, [
                     h(render, {
                         ...props,
+                        ...on,
+                        ...attrs,
+                        ...domProps,
+                        ...other,
                         onOk: this.ok,
                         onQuit: this.cancel
                     })
