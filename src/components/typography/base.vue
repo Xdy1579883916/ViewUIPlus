@@ -362,7 +362,7 @@
                     ...this.linkProps,
                     style,
                     onClick: this.handleClickContent
-                }, [contentNodes, ellipsisExtraNode]);
+                }, () => [contentNodes, ellipsisExtraNode]);
 
                 if (this.ellipsis && !this.ellipsisExpanded && this.isEllipsis && this.mergedEllipsisConfig.tooltip) {
                     return h(Tooltip, {

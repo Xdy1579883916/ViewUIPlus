@@ -30,7 +30,7 @@ Spin.newInstance = properties => {
                     fix: true,
                     fullscreen: true,
                     ref: 'spin'
-                }, [this.render(h)]);
+                }, () => [this.render(h)]);
             } else {
                 vnode = h(Spin, {
                     size: 'large',
