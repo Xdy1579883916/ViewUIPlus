@@ -148,17 +148,19 @@
             },
             handleOnFindSelected (params) {
                 const val = params.value;
+                const complete = params.complete;
                 let value = [...val];
                 for (let i = 0; i < value.length; i++) {
                     for (let j = 0; j < this.data.length; j++) {
-                        if (value[i] === this.data[j].value) {
+                        if ((complete ? value[i].value : value[i]) === this.data[j].value) {
                             this.handleTriggerItem(this.data[j], true);
                             value.splice(0, 1);
                             nextTick(() => {
                                 if (this.childCaspanelList.length) {
                                     const Caspanel = this.childCaspanelList[0].caspanel;
                                     Caspanel.handleOnFindSelected({
-                                        value
+                                        value,
+                                        complete: complete
                                     });
                                 }
                             });

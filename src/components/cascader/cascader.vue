@@ -63,6 +63,7 @@
     import Locale from '../../mixins/locale';
     import mixinsForm from '../../mixins/form';
     import globalConfig from '../../mixins/globalConfig';
+    import {clone} from "lodash-es";
 
     const prefixCls = 'ivu-cascader';
     const selectPrefixCls = 'ivu-select';
@@ -143,6 +144,9 @@
                     const global = getCurrentInstance().appContext.config.globalProperties;
                     return !global.$VIEWUI || global.$VIEWUI.transfer === '' ? false : global.$VIEWUI.transfer;
                 }
+            },
+            complete: {
+                type: Boolean
             },
             name: {
                 type: String
@@ -344,7 +348,8 @@
                 if (!this.changeOnSelect || init || changeOnSelectDataChange) {
                     this.caspanelList.forEach(item => {
                         item.caspanel.handleOnFindSelected({
-                            value: this.currentValue
+                            value: this.currentValue,
+                            complete: this.complete
                         });
                     });
                 }
@@ -415,7 +420,7 @@
 
                     let newVal = [];
                     this.selected.forEach((item) => {
-                        newVal.push(item.value);
+                        newVal.push(this.complete ? clone(item) : clone(item.value));
                     });
 
                     if (!fromInit) {
