@@ -1,6 +1,9 @@
 <template>
     <div style="margin: 100px;width: 200px;">
         <Cascader :data="data" v-model="value1"></Cascader>
+        {{ value1 }}
+        <Cascader complete :data="data" v-model="value2" @on-change="log"></Cascader>
+        {{ value2 }}
     </div>
 </template>
 <script>
@@ -8,6 +11,7 @@
         data () {
             return {
                 value1: [],
+                value2: [],
                 data: [{
                     value: 'beijing',
                     label: '北京',
@@ -54,8 +58,15 @@
                             ]
                         }
                     ],
-                }]
+                },
+                    {
+                        value: 'hubei',
+                        label: '湖北',
+                    }]
             }
+        },
+        methods: {
+            log: console.log
         }
     }
 </script>
