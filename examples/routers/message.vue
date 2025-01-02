@@ -9,6 +9,7 @@
 
         <Button @click="handleAdd">add</Button>
         <Button @click="handleRemove">remove</Button>
+        <Button @click="handleAdd2">loading</Button>
         <transition-group name="move-up" appear>
             <div v-for="(item, index) in list" :key="index">
                 <transition name="move-up" appear @enter="inn" @leave="out">
@@ -66,6 +67,11 @@
                     duration: 1000,
                     background: true
                 });
+            },
+            handleAdd2 () {
+                this.$Message.loading({
+                    content: "查询中，请等待...",
+                })
             },
             success () {
                 this.$Message.success('This is a success tip');

@@ -16,6 +16,21 @@
                 />
             </FormItem>
         </Form>
+
+
+        <div style="margin-top: 20px">app 共享路由：<router-link to="/list">List</router-link></div>
+
+        <div>
+
+            <Button
+                type="primary"
+                @click="handleLoading()"
+            >
+                测试消息
+            </Button>
+        </div>
+
+
         <div class="modal-footer" style="margin-top: 20px">
             <Button @click="$emit('quit', '取消了')">
                 取消
@@ -34,7 +49,6 @@
             </Button>
         </div>
 
-        <div style="margin-top: 20px">app 共享路由：<router-link to="/list">List</router-link></div>
     </div>
 </template>
 <script>
@@ -75,7 +89,12 @@ export default {
                 return
             }
             this.$emit('ok', this.formData.data)
-        }
+        },
+        handleLoading() {
+            this.$Message.loading({
+                content: "查询中，请等待...",
+            })
+        },
     }
 }
 </script>

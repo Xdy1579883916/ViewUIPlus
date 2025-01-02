@@ -116,6 +116,9 @@ export default {
                 },
                 footerShow: false,
                 onOk: (data) => {
+                    this.$Message.loading({
+                        content: "查询中，请等待...",
+                    })
                     this.$Message.info(`点击了确定, ${JSON.stringify(data)}`);
                 },
                 onCancel: (data) => {

@@ -35,7 +35,7 @@ Notification.newInstance = properties => {
         destroy (element) {
             notification.closeAll();
             isClient && setTimeout(function() {
-                const node = document.getElementsByClassName(element)?.[0]
+                const [node] = document.getElementsByClassName(element) || []
                 node && node.remove()
             }, 500);
         }
