@@ -81,6 +81,12 @@ export default {
             }
         }
     },
+    mounted() {
+        // fix: 这里将会报错
+        this.$Message.loading({
+            content: "查询中，请等待...",
+        })
+    },
     methods: {
         async handleOk() {
             let check = await this.$refs.form.validate()

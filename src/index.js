@@ -27,6 +27,7 @@ import mixinsGlobalConfig from './mixins/globalConfig';
 
 // utils
 import csv from './utils/csv';
+import { createChildApp } from './utils/createChildApp';
 import * as assist from './utils/assist';
 import * as dom from './utils/dom';
 import * as transferQueue from './utils/transfer-queue';
@@ -195,6 +196,7 @@ const API = {
     transferQueue,
     csv,
     setupModalPlus,
+    createChildApp,
 };
 
 export default API;

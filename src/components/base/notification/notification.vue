@@ -83,6 +83,7 @@
                 return styles;
             }
         },
+        expose: ['add', 'close', 'closeAll', 'handleGetIndex'],
         methods: {
             add (notice) {
                 const name = notice.name || getUuid();

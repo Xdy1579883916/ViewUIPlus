@@ -1,39 +1,32 @@
 import Notification from './notification.vue';
-import { createApp, h, getCurrentInstance } from 'vue';
 import { isClient } from '../../../utils/index';
+import { createChildApp } from '../../../utils/createChildApp';
 
 Notification.newInstance = properties => {
     if (!isClient) return;
     const _props = properties || {};
 
-    let _instance = null;
-
-    const Instance = createApp({
-        render () {
-            return h(Notification, Object.assign({
-                ref: 'notification'
-            }, _props));
-        },
-        created () {
-            _instance = getCurrentInstance();
-        }
-    });
-
     const container = document.createElement('div');
+
+    const { expose } = createChildApp({
+        app: {},
+        component: Notification,
+        props: _props,
+        el: container
+    })
+
     document.body.appendChild(container);
-    Instance.mount(container);
-    const notification = _instance.refs.notification;
 
     return {
         notice (noticeProps) {
-            notification.add(noticeProps);
+            expose.add(noticeProps);
         },
         remove (name) {
-            notification.close(name);
+            expose.close(name);
         },
-        component: notification,
+        component: expose,
         destroy (element) {
-            notification.closeAll();
+            expose.closeAll();
             isClient && setTimeout(function() {
                 const [node] = document.getElementsByClassName(element) || []
                 node && node.remove()
