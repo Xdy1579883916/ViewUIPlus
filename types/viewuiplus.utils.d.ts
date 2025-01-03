@@ -10,3 +10,4 @@ export declare const dom: any
 export declare const transferQueue: any
 export declare const csv: any
 export declare const setupModalPlus: any
+export declare const createChildApp: any
