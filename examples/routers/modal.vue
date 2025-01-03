@@ -13,11 +13,13 @@
     <p>
         <Button @click="handleRender">Custom content</Button>
         <Button @click="handleRender2">自定义render</Button>
+        <Button @click="handleRender3">自定义render 函数</Button>
     </p>
 </template>
 <script>
 import {Input} from '../../src/index';
 import RemarkModal from "../components/RemarkModal.vue";
+import {resolveComponent} from "vue";
 
 export default {
     data () {
@@ -125,7 +127,26 @@ export default {
                     this.$Message.info(`点击了取消, ${JSON.stringify(data)}`);
                 }
             });
-        }
+        },
+        handleRender3 () {
+            this.$ModalPlus.confirm({
+                headTitle: '备注',
+                width: 1000,
+                render: (h) => {
+                    return h(resolveComponent('Button'), null, () => "你好")
+                },
+                props: {
+                    props: {
+                    }
+                },
+                onOk: (data) => {
+                    this.$Message.info(`点击了确定, ${JSON.stringify(data)}`);
+                },
+                onCancel: (data) => {
+                    this.$Message.info(`点击了取消, ${JSON.stringify(data)}`);
+                }
+            });
+        },
     }
 }
 </script>

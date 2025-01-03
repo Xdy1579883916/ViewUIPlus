@@ -61,19 +61,26 @@ Modal.newInstance = (sharedApp, properties, resolve, reject) => {
             // render content
             let body_render;
             if (render) {
-                body_render = h('div', {
-                    class: `${prefixCls}-body ${prefixCls}-body-render`
-                }, [
-                    h(render, {
-                        ...props,
-                        ...on,
-                        ...attrs,
-                        ...domProps,
-                        ...other,
-                        onOk: this.ok,
-                        onQuit: this.cancel
-                    })
-                ]);
+                if (typeof render === 'function') {
+                    const vNode = render(h)
+                    body_render = h('div', {
+                        class: `${prefixCls}-body ${prefixCls}-body-render`
+                    }, vNode);
+                } else {
+                    body_render = h('div', {
+                        class: `${prefixCls}-body ${prefixCls}-body-render`
+                    }, [
+                        h(render, {
+                            ...props,
+                            ...on,
+                            ...attrs,
+                            ...domProps,
+                            ...other,
+                            onOk: this.ok,
+                            onQuit: this.cancel
+                        })
+                    ]);
+                }
             } else {
                 body_render = h('div', {
                     class: `${prefixCls}-body`
