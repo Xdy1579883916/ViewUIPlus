@@ -4,9 +4,34 @@ import Button from '../button/button.vue';
 import Locale from '../../mixins/locale';
 import {isClient} from '../../utils/index';
 import ModalHeader from "./modal-header.vue";
+import {pick} from "lodash-es";
 
 const prefixCls = 'ivu-modal-confirm';
-
+const modalPropsKeys = [
+    "modelValue",
+    "closable",
+    "maskClosable",
+    "title",
+    "width",
+    "okText",
+    "cancelText",
+    "loading",
+    "styles",
+    "className",
+    "footerHide",
+    "scrollable",
+    "transitionNames",
+    "transfer",
+    "fullscreen",
+    "mask",
+    "draggable",
+    "sticky",
+    "stickyDistance",
+    "resetDragPosition",
+    "zIndex",
+    "beforeClose",
+    "render"
+]
 Modal.newInstance = (sharedApp, properties, resolve, reject) => {
     if (!isClient) return;
     const {
@@ -140,7 +165,7 @@ Modal.newInstance = (sharedApp, properties, resolve, reject) => {
             return h(
                 Modal,
                 {
-                    ...(data || {}),
+                    ...pick(data, modalPropsKeys),
                     width: this.width,
                     scrollable: this.scrollable,
                     closable: this.closable,

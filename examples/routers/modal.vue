@@ -117,6 +117,8 @@ export default {
                     }
                 },
                 footerShow: false,
+                // 非 props 的参数
+                abc: 1,
                 onOk: (data) => {
                     this.$Message.loading({
                         content: "查询中，请等待...",
