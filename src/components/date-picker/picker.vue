@@ -19,7 +19,7 @@
                     :name="name"
                     ref="input"
 
-                    @on-input-change="handleInputChange"
+                    @update:model-value="handleInputChange"
                     @on-focus="handleFocus"
                     @on-blur="handleBlur"
                     @click="handleFocus"
@@ -653,7 +653,7 @@
             handleInputChange (event) {
                 const isArrayValue = this.type.includes('range') || this.multiple;
                 const oldValue = this.visualValue;
-                const newValue = event.target.value;
+                const newValue = event;
                 const newDate = this.parseDate(newValue);
                 const disabledDateFn =
                     this.options &&
