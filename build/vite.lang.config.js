@@ -11,6 +11,7 @@ files.forEach(file => {
 });
 // https://vitejs.dev/config/
 const config = defineConfig({
+    publicDir: false,
     build: {
         target: 'es2015',
         outDir: path.resolve(__dirname, '../dist/locale'),
