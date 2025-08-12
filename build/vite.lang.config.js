@@ -25,7 +25,6 @@ const config = defineConfig({
                 entryFileNames: '[name].js',
                 chunkFileNames: '[name].js',
                 assetFileNames: '[name].[ext]',
-                namespaceToStringTag: true,
                 inlineDynamicImports: false,
                 manualChunks: undefined
             }

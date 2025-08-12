@@ -25,7 +25,6 @@ const config = defineConfig({
                     entryFileNames: 'viewuiplus.min.esm.js',
                     chunkFileNames: '[name].js',
                     assetFileNames: '[name].[ext]',
-                    namespaceToStringTag: true,
                     inlineDynamicImports: false,
                     manualChunks: undefined,
                     globals: { vue: 'Vue' }

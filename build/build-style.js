@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const cleanCSS = require('gulp-clean-css');
 const less = require('gulp-less');
 const rename = require('gulp-rename');
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require('gulp-autoprefixer').default;
 
 // 编译less
 gulp.task('css', function () {
@@ -17,14 +17,8 @@ gulp.task('css', function () {
         )
         .pipe(cleanCSS())
         .pipe(rename('viewuiplus.css'))
-        .pipe(gulp.dest('../dist/styles'));
+        .pipe(gulp.dest('../dist'));
 });
 
-// 拷贝字体文件
-gulp.task('fonts', function () {
-    return gulp.src('../src/styles/common/iconfont/fonts/*.*')
-        .pipe(gulp.dest('../dist/styles/fonts'));
-});
-
-gulp.task('default', gulp.parallel('css', 'fonts'));
+gulp.task('default', gulp.parallel('css'));
 
